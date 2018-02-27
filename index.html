@@ -22,7 +22,11 @@
         vertical-align: middle !important;
         text-align: center;
         font-size: 1.5rem !important;
-        min-width: 20% !important;
+    }
+
+    th{
+        width: 20% !important;
+        height: 0px !important;
     }
 
     .highlight {
@@ -39,41 +43,51 @@
 
 <body>
     <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
         <tbody>
             <tr>
-                <td id="0">Mark</td>
-                <td id="1">Otto</td>
-                <td id="2">@mdo</td>
-                <td id="3">Otto</td>
-                <td id="4">@mdo</td>
+                <td id="0"></td>
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+                <td id="4"></td>
             </tr>
             <tr>
-                <td id="5">Jacob</td>
-                <td id="6">Thornton</td>
-                <td id="7">@fat</td>
-                <td id="8">Thornton</td>
-                <td id="9">@fat</td>
+                <td id="5"></td>
+                <td id="6"></td>
+                <td id="7"></td>
+                <td id="8"></td>
+                <td id="9"></td>
             </tr>
             <tr>
-                <td id="10">Larry the Bird</td>
-                <td id="11">Larry the Bird</td>
+                <td id="10"></td>
+                <td id="11"></td>
                 <td class="free">Free Space</td>
-                <td id="12">Larry the Bird</td>
-                <td id="13">@twitter</td>
+                <td id="12"></td>
+                <td id="13"></td>
             </tr>
             <tr>
-                <td id="14">Larry the Bird</td>
-                <td id="15">Larry the Bird</td>
-                <td id="16">@twitter</td>
-                <td id="17">Larry the Bird</td>
-                <td id="18">@twitter</td>
+                <td id="14"></td>
+                <td id="15"></td>
+                <td id="16"></td>
+                <td id="17"></td>
+                <td id="18"></td>
             </tr>
             <tr>
-                <td id="19">Larry the Bird</td>
-                <td id="20">Larry the Bird</td>
-                <td id="21">@twitter</td>
-                <td id="22">Larry the Bird</td>
-                <td id="23">@twitter</td>
+                <td id="19"></td>
+                <td id="20"></td>
+                <td id="21"></td>
+                <td id="22"></td>
+                <td id="23"></td>
             </tr>
         </tbody>
     </table>
@@ -84,6 +98,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script>
+
         $(function () {
             $('td').click(function () {
                 $(this).toggleClass('highlight');
