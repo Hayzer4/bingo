@@ -21,9 +21,16 @@
     td {
         vertical-align: middle !important;
         text-align: center;
+        font-size: 1.5rem !important;
+        min-width: 20% !important;
     }
 
     .highlight {
+        color: #FFFFFF;
+        background: #76399C;
+    }
+
+    .free {
         color: #FFFFFF;
         background: #76399C;
     }
@@ -34,44 +41,45 @@
     <table class="table table-bordered">
         <tbody>
             <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td id="0">Mark</td>
+                <td id="1">Otto</td>
+                <td id="2">@mdo</td>
+                <td id="3">Otto</td>
+                <td id="4">@mdo</td>
             </tr>
             <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td id="5">Jacob</td>
+                <td id="6">Thornton</td>
+                <td id="7">@fat</td>
+                <td id="8">Thornton</td>
+                <td id="9">@fat</td>
             </tr>
             <tr>
-                <td>Larry the Bird</td>
-                <td>Larry the Bird</td>
-                <td>Free Space</td>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
+                <td id="10">Larry the Bird</td>
+                <td id="11">Larry the Bird</td>
+                <td class="free">Free Space</td>
+                <td id="12">Larry the Bird</td>
+                <td id="13">@twitter</td>
             </tr>
             <tr>
-                <td>Larry the Bird</td>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
+                <td id="14">Larry the Bird</td>
+                <td id="15">Larry the Bird</td>
+                <td id="16">@twitter</td>
+                <td id="17">Larry the Bird</td>
+                <td id="18">@twitter</td>
             </tr>
             <tr>
-                <td>Larry the Bird</td>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
+                <td id="19">Larry the Bird</td>
+                <td id="20">Larry the Bird</td>
+                <td id="21">@twitter</td>
+                <td id="22">Larry the Bird</td>
+                <td id="23">@twitter</td>
             </tr>
         </tbody>
     </table>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -81,6 +89,37 @@
                 $(this).toggleClass('highlight');
             });
         });
+
+        $.get("https://jamieprentice.github.io/BBSBingo/buzzwords.txt", function (result) {
+            var buzzWords = result.split('\n');
+            getRandomBingoWords(buzzWords);
+        });
+        
+
+        function getRandomBingoWords(buzzWords){
+            var arrayLength = buzzWords.length;
+            var bingoWords = [];
+
+            while(bingoWords.length < 24){
+                var index = Math.floor(Math.random() * arrayLength);
+                bingoWords.push(buzzWords[index]);
+                buzzWords.splice(index, 1);
+                arrayLength--;
+            }
+
+            fillTable(bingoWords);
+        }
+
+        function fillTable(bingoWords){
+            for (let i = 0; i < bingoWords.length; i++) {
+                const element = bingoWords[i];
+                $("#"+ i).html(bingoWords[i]);
+            }
+        }
+
+
+
+
     </script>
 </body>
 
