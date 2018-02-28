@@ -30,11 +30,13 @@ Goal
 Granularity
 Herding Cats
 High Confidence
+Hockey Stick
 Integrity
 Leeds
 Lessons Learned
 Leverage
 Lockheed
+Migration
 Mission
 Mobility
 New Starts
@@ -62,6 +64,7 @@ Tactical
 The Andies
 Timeline
 Time Sheets
+Transition
 Utilization
 Values
 Values
