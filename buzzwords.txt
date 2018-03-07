@@ -20,6 +20,7 @@ Coventry
 Don’t ask me
 Dynamic
 Ethical
+Exit strategy
 Extension
 Facilitate
 Farnborough
@@ -28,10 +29,12 @@ Framework
 Game Plan
 Goal
 Granularity
+Heavy lifting
 Herding Cats
 High Confidence
 Hockey Stick
 Integrity
+Innovate
 Leeds
 Lessons Learned
 Leverage
@@ -47,11 +50,12 @@ On-Track
 Opportunities
 Outlook
 Ownership
-PM
 Pen to Paper
+Pivot
 Pipeline
 Portfolio
 Prism
+Reach Out
 Reassure
 Recognition
 Revenue
