@@ -112,7 +112,7 @@
         
 
         function getRandomBingoWords(buzzWords){
-            var arrayLength = buzzWords.length;
+            var arrayLength = buzzWords.length - 1; // -1 removes last blank line. 
             var bingoWords = [];
 
             while(bingoWords.length < 24){
