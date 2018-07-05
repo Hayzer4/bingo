@@ -71,7 +71,6 @@ Time Sheets
 Transition
 Utilization
 Values
-Values
 Vision
 Work Day
 Year-End
