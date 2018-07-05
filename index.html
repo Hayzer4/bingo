@@ -103,6 +103,7 @@
         $(function () {
             $('td').click(function () {
                 $(this).toggleClass('highlight');
+                navigator.vibrate([500, 250, 500, 250, 500, 250, 500, 250, 500, 250, 500]);
             });
         });
 
@@ -131,7 +132,6 @@
                 $("#"+ i).html(bingoWords[i]);
             }
         }
-        navigator.vibrate([500, 250, 500, 250, 500, 250, 500, 250, 500, 250, 500]);
     </script>
 </body>
 
